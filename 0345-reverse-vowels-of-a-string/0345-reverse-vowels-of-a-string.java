@@ -14,8 +14,6 @@ class Solution {
         for(int i=0;i<in.size();i++){
             c[in.get(i)] = l.get(in.size()-i-1);
         }
-        System.out.println(l);
-        System.out.println(in);
         String st = "";
         for(char i:c)
             st+=i;  
