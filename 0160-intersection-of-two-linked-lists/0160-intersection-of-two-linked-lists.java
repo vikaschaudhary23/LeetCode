@@ -12,15 +12,11 @@
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if(headA==null || headB==null) return null;
-        List<ListNode> l = new LinkedList<>();
-        while(headA!=null){
-            l.add(headA);
-            headA = headA.next;
+        ListNode temp1=headA,temp2=headB;
+        while(temp1!=temp2){
+            temp1= temp1!=null ? temp1.next : headB;
+            temp2= temp2!=null ? temp2.next : headA;
         }
-        while(headB!=null){
-            if(l.contains(headB)) return headB;
-            headB = headB.next;
-        }
-        return null;
+        return temp1;
     }
 }
