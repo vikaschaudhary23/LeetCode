@@ -1,6 +1,6 @@
 class Solution {
-    public void permutations(boolean[] arr, int[] a, Set<List<Integer>> ans, List<Integer> l, int size){
-        if(l.size()==size){
+    public void permutations(boolean[] arr, int[] a, List<List<Integer>> ans, List<Integer> l, int size){
+        if(l.size()==size && !ans.contains(l)){
             ans.add(new ArrayList<>(l));
             return;
         }
@@ -20,11 +20,11 @@ class Solution {
         boolean arr[] = new boolean[size];
         Arrays.fill(arr,false);
         List<Integer> l = new ArrayList<>();
-        Set<List<Integer>> s = new HashSet<>();
+        // Set<List<Integer>> s = new HashSet<>();
         List<List<Integer>> ans = new ArrayList<>();
-        permutations(arr, nums, s, l, size);
-        for(List<Integer> i:s)
-            ans.add(i);
+        permutations(arr, nums, ans, l, size);
+        // for(List<Integer> i:s)
+        //     ans.add(i);
         return ans;
     }
 }
