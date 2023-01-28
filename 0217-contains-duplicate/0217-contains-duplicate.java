@@ -1,7 +1,7 @@
 import java.util.TreeSet;
 class Solution {
     public boolean containsDuplicate(int[] nums) {
-        TreeSet<Integer> s = new TreeSet<>();
+        Set<Integer> s = new HashSet<>();
         for(int i:nums){
             s.add(i);
         }
