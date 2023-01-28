@@ -11,8 +11,8 @@ class Solution {
                 max=i;
             sum+=i;
         }
-        int num = (sum-min-max);
-        double avg = (double)num/l;
+
+        double avg = (double)(sum-min-max)/l;
         return avg;
     }
 }
