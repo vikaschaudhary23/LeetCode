@@ -13,7 +13,7 @@ class Solution {
                 j++;
                 k=j+1;
             }
-            if(k==n && j==n-1){
+            if(d1>diff ||(k==n && j==n-1)){
                 i++;
                 j=i+1;
                 k=j+1;
