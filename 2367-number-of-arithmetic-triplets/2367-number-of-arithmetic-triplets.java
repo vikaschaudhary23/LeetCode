@@ -9,7 +9,7 @@ class Solution {
             int d1 = (nums[j]-nums[i]), d2 = (nums[k]-nums[j]);
             if(d1==d2 && d1==diff) ans++;
             k++;
-            if(k==n){
+            if(d2>diff || k==n){
                 j++;
                 k=j+1;
             }
