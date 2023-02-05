@@ -14,13 +14,6 @@ class Solution {
         for(int i:arr){
             if(i>0) return false;
         }
-//         Map<Character, Integer> map1 = new HashMap<>();
-//         for(int i=0;i<n1;i++){
-            
-//         }
-            
-            
-//         Map<Character, Integer> map2 = new HashMap<>();
         return true;
     }
 }
