@@ -1,8 +1,16 @@
 class Solution {
-    
+    public int ans(int n, int a[]){
+        if(n==0 || n==1) return n;
+        if(a[n]!=0) return a[n];
+        
+        a[n] = ans(n-1, a)+ans(n-2, a);
+        return a[n];
+    }
     public int fib(int n) {
-        if(n<=1)
-            return n;
-        return fib(n-1)+fib(n-2);
+        int a[] = new int[n+1];
+        return ans(n, a);
+        // if(n<=1)
+        //     return n;
+        // return fib(n-1)+fib(n-2);
     }
 }
