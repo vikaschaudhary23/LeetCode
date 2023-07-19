@@ -23,16 +23,25 @@ class Solution {
             else if(root.left==null) return root.right;
             else if(root.right==null) return root.left;
             else{
-                int lmax = max(root.left);
-                deleteNode(root,lmax);
-                root.val = lmax;
+                // int lmax = max(root.left);
+                // deleteNode(root,lmax);
+                // root.val = lmax;
+                
+                int lmin = min(root.right);
+                deleteNode(root,lmin);
+                root.val = lmin;
             }
         }
         return root;
     }
     public int max(TreeNode root){
         if(root==null) return Integer.MIN_VALUE;
-        int m = max(root.right);
-        return Math.max(root.val, m);
+        int mx = max(root.right);
+        return Math.max(root.val, mx);
+    }
+    public int min(TreeNode root){
+        if(root==null) return Integer.MAX_VALUE;
+        int mn = min(root.left);
+        return Math.min(root.val, mn);
     }
 }
