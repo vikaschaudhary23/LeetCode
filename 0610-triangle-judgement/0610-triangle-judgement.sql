@@ -1,9 +1,10 @@
-SELECT 
-    x, 
-    y, 
-    z,
-    IF(x + y > z AND x + z > y AND y + z > x, 'Yes', 'No') AS triangle
-FROM Triangle;
+select 
+x, y, z,
+case
+when x+y>z and y+z>x and z+x>y then 'Yes'
+else 'No'
+END as triangle
+from triangle;
 
 -- Synced seamlessly with LeetHub Pro
 -- Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
